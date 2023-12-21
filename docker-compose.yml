@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  delivery-api:
+    container_name: delivery-api
+    image: bitnami/postgresql
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=deliveryapi
